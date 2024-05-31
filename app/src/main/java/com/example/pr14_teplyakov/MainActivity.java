@@ -1,10 +1,13 @@
 package com.example.pr14_teplyakov;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -32,6 +35,10 @@ public class MainActivity extends AppCompatActivity {
     EditText height;
     RadioButton m;
     RadioButton w;
+    FrameLayout training1;
+    FrameLayout training2;
+    FrameLayout training3;
+    FrameLayout training4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,19 +114,38 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClickTraining1(View view){
+    public void onClickStep5(View view){
+        if(!m.isChecked() && !w.isChecked()) AlertDialog("Уведомление", "Выберите ваш пол!");
+        else {
+            setContentView(R.layout.main);
+            training1 = findViewById(R.id.training1);
+            training2 = findViewById(R.id.training2);
+            training3 = findViewById(R.id.training3);
+            training4 = findViewById(R.id.training4);
+            if(cb1.isChecked()) training1.setVisibility(View.VISIBLE);
+            if(cb2.isChecked()) training2.setVisibility(View.VISIBLE);
+            if(cb3.isChecked()) training3.setVisibility(View.VISIBLE);
+            if(cb4.isChecked()) training4.setVisibility(View.VISIBLE);
+        }
+    }
 
+    public void onClickTraining1(View view){
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=6rr4sfFVCNo"));
+        startActivity(browserIntent);
     }
 
     public void onClickTraining2(View view){
-
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=VwUYKfmXVTU"));
+        startActivity(browserIntent);
     }
 
     public void onClickTraining3(View view){
-
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=UhAt45tuirk"));
+        startActivity(browserIntent);
     }
 
     public void onClickTraining4(View view){
-
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=zfUjxQexhjA"));
+        startActivity(browserIntent);
     }
 }
