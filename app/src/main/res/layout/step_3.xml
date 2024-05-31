@@ -17,7 +17,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Шаг №1"
+                android:text="Шаг №2"
                 android:textSize="28sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="180dp"/>
@@ -26,7 +26,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Добро пожаловать в 'Личный фитнес тренер'."
+                android:text="Отлично, ..."
                 android:textSize="14sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"/>
@@ -35,45 +35,38 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Как вас зовут?"
+                android:text="Как часто вы готовы заниматься спортом?"
                 android:textSize="14sp"
                 android:layout_gravity="center"/>
 
-            <TextView
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ваше имя:"
+                android:text="Раз в день"
                 android:textColor="@color/white"
-                android:layout_marginLeft="35sp"
+                android:layout_marginLeft="35dp"
                 android:layout_marginTop="40dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/round_component"
-                android:hint="Имя"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"/>
-
-            <TextView
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ваша фамилия:"
+                android:text="Три раза в неделю"
                 android:textColor="@color/white"
-                android:layout_marginLeft="35sp"
-                android:layout_marginTop="10dp"/>
+                android:layout_marginLeft="35dp"/>
 
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:background="@drawable/round_component"
-                android:hint="Фамилия"
-                android:paddingLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Два раза в неделю"
+                android:textColor="@color/white"
+                android:layout_marginLeft="35dp"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Раз в неделю"
+                android:textColor="@color/white"
+                android:layout_marginLeft="35dp"/>
 
             <Button
                 android:layout_width="match_parent"
