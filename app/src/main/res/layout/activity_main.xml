@@ -44,12 +44,11 @@
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:onClick="onClickRegin"
+                android:background="@drawable/round_component"
                 android:textColor="#0097FF"/>
 
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
