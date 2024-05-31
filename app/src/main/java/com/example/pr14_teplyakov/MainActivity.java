@@ -107,8 +107,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void onClickStep5(View view){
-        if(!m.isChecked() && !w.isChecked()) AlertDialog("Уведомление", "Выберите ваш пол!");
-        else setContentView(R.layout.main);
+    public void onClickTraining1(View view){
+
+    }
+
+    public void onClickTraining2(View view){
+
+    }
+
+    public void onClickTraining3(View view){
+
+    }
+
+    public void onClickTraining4(View view){
+
     }
 }
