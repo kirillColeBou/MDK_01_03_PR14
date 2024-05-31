@@ -2,8 +2,10 @@ package com.example.pr14_teplyakov;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -39,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     FrameLayout training2;
     FrameLayout training3;
     FrameLayout training4;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+        editor = sharedPreferences.edit();
     }
 
     public void AlertDialog(String title, String message){
@@ -113,7 +119,10 @@ public class MainActivity extends AppCompatActivity {
             w = findViewById(R.id.w);
         }
     }
-
+    boolean tr1 = false;
+    boolean tr2 = false;
+    boolean tr3 = false;
+    boolean tr4 = false;
     public void onClickStep5(View view){
         if(!m.isChecked() && !w.isChecked()) AlertDialog("Уведомление", "Выберите ваш пол!");
         else {
@@ -122,10 +131,15 @@ public class MainActivity extends AppCompatActivity {
             training2 = findViewById(R.id.training2);
             training3 = findViewById(R.id.training3);
             training4 = findViewById(R.id.training4);
-            if(cb1.isChecked()) training1.setVisibility(View.VISIBLE);
-            if(cb2.isChecked()) training2.setVisibility(View.VISIBLE);
-            if(cb3.isChecked()) training3.setVisibility(View.VISIBLE);
-            if(cb4.isChecked()) training4.setVisibility(View.VISIBLE);
+            if(cb1.isChecked()) {training1.setVisibility(View.VISIBLE); tr1 = true;}
+            if(cb2.isChecked()) {training2.setVisibility(View.VISIBLE); tr2 = true;}
+            if(cb3.isChecked()) {training3.setVisibility(View.VISIBLE); tr3 = true;}
+            if(cb4.isChecked()) {training4.setVisibility(View.VISIBLE); tr4 = true;}
+            editor.putBoolean("training1", tr1);
+            editor.putBoolean("training2", tr2);
+            editor.putBoolean("training3", tr3);
+            editor.putBoolean("training4", tr4);
+            editor.commit();
         }
     }
 
@@ -147,5 +161,17 @@ public class MainActivity extends AppCompatActivity {
     public void onClickTraining4(View view){
         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=zfUjxQexhjA"));
         startActivity(browserIntent);
+    }
+
+    public void onClickSkip(View view){
+        setContentView(R.layout.main);
+        training1 = findViewById(R.id.training1);
+        training2 = findViewById(R.id.training2);
+        training3 = findViewById(R.id.training3);
+        training4 = findViewById(R.id.training4);
+        if(sharedPreferences.getBoolean("training1", true)) training1.setVisibility(View.VISIBLE);
+        if(sharedPreferences.getBoolean("training2", true)) training2.setVisibility(View.VISIBLE);
+        if(sharedPreferences.getBoolean("training3", true)) training3.setVisibility(View.VISIBLE);
+        if(sharedPreferences.getBoolean("training4", true)) training4.setVisibility(View.VISIBLE);
     }
 }
