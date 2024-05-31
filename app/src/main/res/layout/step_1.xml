@@ -48,6 +48,7 @@
                 android:layout_marginTop="40dp"/>
 
             <EditText
+                android:id="@+id/firstname"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/round_component"
@@ -66,6 +67,7 @@
                 android:layout_marginTop="10dp"/>
 
             <EditText
+                android:id="@+id/lastname"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:background="@drawable/round_component"
@@ -84,7 +86,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:onClick="onClickRegin"
+                android:onClick="onClickStep1"
                 android:textColor="#0097FF"/>
 
         </LinearLayout>

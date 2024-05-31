@@ -23,6 +23,7 @@
                 android:layout_marginTop="180dp"/>
 
             <TextView
+                android:id="@+id/nice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
@@ -39,34 +40,44 @@
                 android:textSize="14sp"
                 android:layout_gravity="center"/>
 
-            <RadioButton
+            <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Раз в день"
-                android:textColor="@color/white"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="40dp"/>
+                android:layout_height="wrap_content">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Три раза в неделю"
-                android:textColor="@color/white"
-                android:layout_marginLeft="35dp"/>
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Раз в день"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="40dp"/>
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Два раза в неделю"
-                android:textColor="@color/white"
-                android:layout_marginLeft="35dp"/>
+                <RadioButton
+                    android:id="@+id/rb2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Три раза в неделю"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="35dp"/>
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Раз в неделю"
-                android:textColor="@color/white"
-                android:layout_marginLeft="35dp"/>
+                <RadioButton
+                    android:id="@+id/rb3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Два раза в неделю"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="35dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Раз в неделю"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="35dp"/>
+
+            </RadioGroup>
 
             <Button
                 android:layout_width="match_parent"
@@ -77,7 +88,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:onClick="onClickRegin"
+                android:onClick="onClickStep2"
                 android:textColor="#0097FF"/>
 
         </LinearLayout>

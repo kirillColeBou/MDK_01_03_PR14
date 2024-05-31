@@ -40,20 +40,28 @@
                 android:layout_marginTop="40dp"
                 android:layout_marginLeft="35dp"/>
 
-            <RadioButton
+            <RadioGroup
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Мужской"
-                android:textColor="@color/white"
-                android:layout_marginLeft="35dp"
-                android:layout_marginTop="10dp"/>
+                 android:layout_height="wrap_content">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Женский"
-                android:textColor="@color/white"
-                android:layout_marginLeft="35dp"/>
+                <RadioButton
+                    android:id="@+id/m"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Мужской"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginTop="10dp"/>
+
+                <RadioButton
+                    android:id="@+id/w"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Женский"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="35dp"/>
+
+            </RadioGroup>
 
             <Button
                 android:layout_width="match_parent"
@@ -64,7 +72,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
-                android:onClick="onClickRegin"
+                android:onClick="onClickStep5"
                 android:textColor="#0097FF"/>
 
         </LinearLayout>
