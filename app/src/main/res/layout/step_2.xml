@@ -17,7 +17,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Шаг №3"
+                android:text="Шаг №2"
                 android:textSize="28sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="180dp"/>
@@ -26,37 +26,45 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Чему вы готовы уделить большее внимание?"
+                android:text="Отлично, ..."
                 android:textSize="14sp"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"/>
 
-            <CheckBox
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Спина"
+                android:textColor="@color/white"
+                android:text="Как часто вы готовы заниматься спортом?"
+                android:textSize="14sp"
+                android:layout_gravity="center"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Раз в день"
                 android:textColor="@color/white"
                 android:layout_marginLeft="35dp"
                 android:layout_marginTop="40dp"/>
 
-            <CheckBox
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Бицепцы"
+                android:text="Три раза в неделю"
                 android:textColor="@color/white"
                 android:layout_marginLeft="35dp"/>
 
-            <CheckBox
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Трицепцы"
+                android:text="Два раза в неделю"
                 android:textColor="@color/white"
                 android:layout_marginLeft="35dp"/>
 
-            <CheckBox
+            <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Искроножные мышцы"
+                android:text="Раз в неделю"
                 android:textColor="@color/white"
                 android:layout_marginLeft="35dp"/>
 
